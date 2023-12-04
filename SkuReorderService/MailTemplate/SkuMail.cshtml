@@ -1,0 +1,172 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reorder Mail</title>
+</head>
+
+<body style="background-color: #EEEEEE; margin: 0; padding: 0; ">
+    <table cellspacing="0" style="margin: 0 auto; width: 100%; border-collapse: collapse;  font-family: 'Roboto', Arial !important">
+        <tbody>
+            <tr>
+                <td align="center" style="padding: 20px 23px 0 23px">
+                    <table width="800" style="background-color: #FFF; margin: 0 auto; border-radius: 5px">
+                        <tr>
+                            <td align="center">
+                                <table width="750" style="margin: 0 auto">
+                                    <tr>
+                                        <td>
+                                            <div style="display:flex; justify-content: space-between;">
+                                                <div>
+
+                                                    <h1 style="font-size: 26px; color: #c1b5b5;">Reorder Confirmation</h1>
+                                                </div>
+                                                <div style="padding-left:320px;padding-top:40px">
+
+                                                    <img src="https://glcdistribution.com/wp-content/uploads/2021/03/glc-dist-horizontal.png" width="200" alt="GLC Distribution, LLC" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" cellspacing="0" style="padding: 0 0 30px 0; vertical-align: middle">
+                                <table width="750" style="border-collapse: collapse; background-color: #FaFaFa; margin: 0 auto; border: 1px solid #E5E5E5">
+                                    <tr>
+                                        <td style="vertical-align: top">
+                                            <table style="width: 100%; border-collapse: collapse">
+                                                <tr>
+
+                                                    <td style="vertical-align: top; padding: 18px 18px 8px 23px; font-family: 'Roboto', Arial !important">
+                                                        <p style="font-size: 14px; color: #333333; text-transform: uppercase; font-weight: 900; margin: 0; font-family: 'Roboto', Arial !important">
+                                                            client Details:
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: top; padding: 0 18px 18px 23px">
+                                                        <table width="100%" style="border-collapse: collapse">
+                                                            <tr>
+                                                                <td style="font-family: 'Roboto', Arial !important">
+                                                                    <p style="font-size: 14px; color: #000; margin: 0 0 5px 0; font-family: 'Roboto', Arial !important">
+                                                                        Client:
+                                                                    </p>
+                                                                </td>
+                                                                <td align="left" style="font-family: 'Roboto', Arial !important">
+                                                                    <p style="font-size: 14px; color: #000;padding-right:220px; margin: 0 0 5px 0; font-family: 'Roboto', Arial !important">
+                                                                        @Model?.client
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-family: 'Roboto', Arial !important">
+                                                                    <p style="font-size: 14px; color: #000; margin: 0 0 5px 0; font-family: 'Roboto', Arial !important">
+                                                                        Current Date:
+                                                                    </p>
+                                                                </td>
+                                                                <td align="left" style="font-family: 'Roboto', Arial !important">
+                                                                    <p style="font-size: 14px; color: #000;padding-right:220px; margin: 0 0 5px 0; font-family: 'Roboto', Arial !important">
+                                                                        @Model?.currentdate
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" cellspacing="0" style="padding: 0 0 30px 0; vertical-align: middle">
+                                <table width="750" style="margin: 0 auto; border: 1px solid #E5E5E5">
+                                    <thead style="background-color: #FaFaFa;">
+                                        <tr>
+                                            <td width="100" align="left" style="font-family: 'Roboto', Arial !important">
+                                                <p style="margin: 0; font-size: 13px; color: #333333; padding: 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                    SKU
+                                                </p>
+                                            </td>
+                                            <td width="200" align="left" style="font-family: 'Roboto', Arial !important">
+                                                <p style="margin: 0; font-size: 13px; color: #333333; padding: 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                    Description
+                                                </p>
+                                            </td>
+                                            <td width="50" align="right" style="font-family: 'Roboto', Arial !important">
+                                                <p style="margin: 0; font-size: 13px; color: #333333; padding: 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                    ReOrder Quantity
+                                                </p>
+                                            </td>
+                                            <td width="50" align="right" style="font-family: 'Roboto', Arial !important">
+                                                <p style="margin: 0; font-size: 13px; color: #333333; padding: 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                    Available Quantity
+                                                </p>
+                                            </td>
+
+                                        
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                            foreach (var item in @Model?.skuList)
+                                            {
+                                                <tr>
+                                                    <td width="100" align="left" style="font-family: 'Roboto', Arial !important">
+                                                        <p style="margin: 0; font-size: 13px; color: #333333; padding: 0 0 5px 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                            @item.Sku1
+                                                        </p>
+                                                    </td>
+                                                    <td width="200" align="left" style="font-family: 'Roboto', Arial !important">
+                                                        <p style="margin: 0; font-size: 13px; color: #333333; padding: 0 0 5px 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                            @item.Description
+                                                        </p>
+                                                    </td>
+                                                    <td width="50" align="right" style="font-family: 'Roboto', Arial !important">
+                                                        <p style="margin: 0; font-size: 13px; color: #333333; padding: 0 0 5px 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                            @item.Reorderqty
+                                                        </p>
+                                                    </td>
+                                                    <td width="50" align="right" style="font-family: 'Roboto', Arial !important">
+                                                        <p style="margin: 0; font-size: 13px; color: #333333; padding: 0 0 5px 0; font-family: 'Roboto', Arial !important; text-align: center;">
+                                                            @item.totalqty
+                                                        </p>
+                                                    </td>
+                                                    
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            @*            <tr>
+            <td align="center" style="padding-top: 29px; padding-bottom: 50px">
+            <table style="width: 100%">
+            <tr>
+            <td align="center" style="font-family: 'Roboto', Arial !important">
+            <a href="@Model?.WebUrl" target="_blank" style="color: #128ced; text-decoration: none; outline: 0;">
+            <img src="@Model?.WebUrl" border="0">
+            </a>
+            </td>
+            </tr>
+            </table>
+            </td>
+            </tr>*@
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+
