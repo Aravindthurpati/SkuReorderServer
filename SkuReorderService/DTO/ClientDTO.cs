@@ -15,5 +15,8 @@ namespace SkuReorderService.DTO
         public string? Reorderbccemail { get; set; }
 
 
+
+        
+
     }
 }
